@@ -1,6 +1,6 @@
 {
   "name": "peerflix-server",
-  "version": "0.2.0",
+  "version": "0.3.1",
   "author": "Aliaksei Sapach <dreamsonic@tut.by>",
   "description": "Streaming torrent client for node.js with web ui.",
   "bin": {
@@ -8,7 +8,8 @@
   },
   "scripts": {
     "start": "node ./server/bin.js",
-    "test": "grunt test"
+    "test": "grunt test",
+    "prepack": "grunt build"
   },
   "main": "./server/bin.js",
   "repository": {
@@ -24,9 +25,10 @@
     "web"
   ],
   "dependencies": {
+    "archiver": "^2.1.1",
     "connect-multiparty": "^2.0.0",
     "express": "^3.21.2",
-    "lodash": "^2.4.2",
+    "lodash": "^4",
     "mkdirp": "^0.5.1",
     "pump": "^1.0.2",
     "range-parser": "^1.2.0",
@@ -67,6 +69,6 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=0.12"
+    "node": ">=6"
   }
 }
